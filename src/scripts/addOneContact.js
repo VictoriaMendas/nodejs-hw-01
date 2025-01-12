@@ -1,15 +1,19 @@
 import * as fs from 'node:fs/promises';
 import { PATH_DB } from '../constants/contacts.js';
-import { createFakeContact } from '../index.js';
+import { createFakeContact } from '../utils/createFakeContact.js';
+// import { createFakeContact } from '../index.js';
 
 export const addOneContact = async () => {
-  const newArr = [];
-  newArr.push(createFakeContact());
   try {
     const data = await fs.readFile(PATH_DB, 'utf8');
-    console.log(data);
+
+    const todo = JSON.parse(data);
+    todo.push(createFakeContact());
+
+    await fs.writeFile(PATH_DB, JSON.stringify(todo, null, 3), 'utf8');
+    console.log('Contact added successfully:', createFakeContact());
   } catch (error) {
-    console.error(error);
+    console.error(error.message);
   }
 };
 
