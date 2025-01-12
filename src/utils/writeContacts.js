@@ -3,12 +3,11 @@ import * as fs from 'node:fs/promises';
 
 export const writeContacts = async (updatedContacts) => {
   try {
-    const data = await fs.writeFile(PATH_DB, {
-      updatedContacts,
-      encoding: 'utf-8',
-    });
-
-    return JSON.parse(data);
+    await fs.writeFile(
+      PATH_DB,
+      JSON.stringify(updatedContacts, undefined, 2),
+      'utf-8',
+    );
   } catch (error) {
     console.error('Error reading contacts:', error);
     throw error;
