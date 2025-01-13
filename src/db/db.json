@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": "f2f38883-00a1-442c-8e69-5c4949979804",
+    "name": "Emanuel Christiansen",
+    "phone": "204-343-3813 x273",
+    "email": "Myles91@gmail.com",
+    "job": "Principal Paradigm Director"
+  },
+  {
+    "id": "4e9b06cf-1cf1-4807-ae0f-a05a1b1d7167",
+    "name": "Carmen Lowe",
+    "phone": "1-533-364-4478 x414",
+    "email": "Anastacio.Hauck@yahoo.com",
+    "job": "Internal Branding Orchestrator"
+  },
+  {
+    "id": "29c07cec-546f-4242-b751-a5973be4dc31",
+    "name": "Diane Mohr",
+    "phone": "510-857-3643 x52311",
+    "email": "Isabella_Dare48@hotmail.com",
+    "job": "Corporate Marketing Officer"
+  },
+  {
+    "id": "61329fd3-b501-41ba-92bb-fa231936bd61",
+    "name": "Lionel Hansen IV",
+    "phone": "649.431.0829",
+    "email": "Evie35@hotmail.com",
+    "job": "Lead Quality Developer"
+  },
+  {
+    "id": "d8c157df-df58-406e-b7d0-55168e786e14",
+    "name": "Winifred Bergstrom",
+    "phone": "(793) 354-1494",
+    "email": "Keira_Moore@hotmail.com",
+    "job": "Corporate Data Facilitator"
+  }
+]

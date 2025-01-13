@@ -1,17 +1,23 @@
-// import * as fs from 'node:fs/promises';
+import * as fs from 'node:fs/promises';
 
-// import { PATH_DB } from '../constants/contacts.js';
+import { PATH_DB } from '../constants/contacts.js';
 import { createFakeContact } from '../utils/createFakeContact.js';
 import { writeContacts } from '../utils/writeContacts.js';
 
 const generateContacts = async (number) => {
-  const arr = [];
   try {
+    const data = await fs.readFile(PATH_DB, 'utf-8');
+    const currentContact = JSON.parse(data);
+    const arr = [];
+
     for (let i = 0; i < number; i++) {
-      return arr.push(createFakeContact());
+      arr.push(createFakeContact());
     }
-    const updatedContacts = [...number, ...arr];
+
+    const updatedContacts = [...currentContact, ...arr];
+
     await writeContacts(updatedContacts);
+    console.log(updatedContacts);
   } catch (error) {
     console.log(error.message);
   }
